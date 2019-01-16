@@ -2,9 +2,11 @@ package org.fasttrackit;
 
 public class Car extends AutoVehicle {
 
-    private int doorCount;
 
     public static final String CONTROL_TYPE = "radio_controlled";
+
+    private int doorCount;
+
 
     //    Constructori
 //    Sa putem crea un obiect de tip Car doar cu parametru engine
@@ -21,7 +23,6 @@ public class Car extends AutoVehicle {
 //    Methods
 
 
-
     //  gather & setter
     public int getDoorCount() {
         return doorCount;
@@ -30,7 +31,6 @@ public class Car extends AutoVehicle {
     public void setDoorCount(int doorCount) {
         this.doorCount = doorCount;
     }
-
 
 
 }

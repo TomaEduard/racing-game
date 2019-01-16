@@ -1,23 +1,24 @@
 package org.fasttrackit;
 
 public class AutoVehicle extends Vehicle {
-
     private Engine engine;
+
     private boolean running;
 
-//    Constructor
 
+//    Constructor
     public AutoVehicle(Engine engine){
         this.engine = engine;
+    }
+
+    public AutoVehicle() {
+//        this.engine = new Engine();
+        this(new Engine());
     }
 
     public AutoVehicle(Engine engine, String name){
         this.engine = engine;
         this.setName(name);
-    }
-
-    public AutoVehicle() {
-        this(new Engine());
     }
 
 //
