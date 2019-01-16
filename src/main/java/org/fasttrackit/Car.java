@@ -9,18 +9,13 @@ public class Car extends AutoVehicle {
 
 
     //    Constructori
-//    Sa putem crea un obiect de tip Car doar cu parametru engine
+
     public Car(Engine engine) {
         super(engine);
     }
 
-    //    Sa putem crea un obiect de tip Car si fara parametri engine
-    public Car() {
-        this(new Engine());
-    }
 
-
-//    Methods
+    //    Methods
 
 
     //  gather & setter
@@ -32,7 +27,12 @@ public class Car extends AutoVehicle {
         this.doorCount = doorCount;
     }
 
-
+    @Override
+    public String toString() {
+        return "Car{" +
+                "doorCount=" + doorCount +
+                "} " + super.toString();
+    }
 }
 
 

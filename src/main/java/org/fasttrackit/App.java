@@ -2,16 +2,14 @@ package org.fasttrackit;
 
 import org.fasttrackit.cheater.UFO;
 
-import java.time.LocalDateTime;
-
 public class App {
     public static void main(String[] args) {
 
-/*
+
         Engine engine = new Engine();
-        engine.manufacturer = "Renault";
-        engine.capacity = 1500;
-        engine.expiryDate = LocalDateTime.now().plusYears(10);
+        engine.setManufacturer("Renault");
+        engine.setCapacity(1500);
+//         LocalDateTime.now().plusYears(10);
 
 //        Car
         Car Dacia = new Car(engine);
@@ -23,6 +21,7 @@ public class App {
         Dacia.setDoorCount(4);
 //        Dacia.CONTROL_TYPE = "updated";
 
+        /*
         Car skoda = new Car(engine);
         skoda.setName("Skoda");
         skoda.setName("Skoda Fabia");
@@ -39,13 +38,9 @@ public class App {
         ford.setName("Ford");
         System.out.println(ford.toString());
 
-
-//        UFO
-        UFO ufo = new UFO();
-
-
     */
 
+        System.out.println(Dacia.toString());
 
 //        Exemple of static variables unique for the whole application
         Vehicle vehicle1 = new Vehicle();
@@ -59,11 +54,12 @@ public class App {
 //        Vezi exeemplul vehicle1, vehicle2 cu warninguri !
 //        Vehicle.vehicleCount = 3;
 
-        System.out.println("Value for vehicle1: " + vehicle1.vehicleCount);
-        System.out.println("Value for vehicle1: " + vehicle2.vehicleCount);
-        System.out.println("Value for class: " + Vehicle.vehicleCount);
 
 
+        vehicle1.accelerate(34.12);
+        vehicle2.accelerate(130, .8);
+
+        new UFO().accelerate(130,.8);
 
 /*
         double carTraveledDistance = car.accelerate(100, 2);
@@ -80,4 +76,6 @@ boolean     false
 
 */
     }
+
+
 }

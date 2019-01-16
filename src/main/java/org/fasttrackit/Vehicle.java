@@ -19,31 +19,18 @@ public class Vehicle {
         vehicleCount++;
     }
 
-    @Override
-    public int hashCode() {
-        return super.hashCode();
-    }
-
     //      Methods
-     public double accelerate(double speed, double durationInHours) {
-        System.out.println(name + " accelerated with " + speed +
+
+    public double accelerate(double speed, double durationInHours) {
+        System.out.println(getName() + " accelerated with " + speed +
                 " km/h for " + durationInHours + " hours.");
         double traveledDistance = speed * durationInHours;
         System.out.println("Traveled distance: " + traveledDistance + " km.");
         return traveledDistance;
     }
-     public double accelerate(double speed) {
-        return accelerate(speed, 1);
-    }
 
-    @Override
-    public String toString() {
-        return "Vehicle{" +
-                "name='" + name + '\'' +
-                ", color='" + color + '\'' +
-                ", wheelCount=" + wheelCount +
-                ", mileage=" + mileage +
-                '}';
+    public double accelerate(double speed) {
+        return accelerate(speed, 1);
     }
 
 
@@ -79,5 +66,15 @@ public class Vehicle {
 
     public void setMileage(double mileage) {
         this.mileage = mileage;
+    }
+
+    @Override
+    public String toString() {
+        return "Vehicle{" +
+                "name='" + name + '\'' +
+                ", color='" + color + '\'' +
+                ", wheelCount=" + wheelCount +
+                ", mileage=" + mileage +
+                '}';
     }
 }

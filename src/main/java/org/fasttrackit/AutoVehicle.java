@@ -1,13 +1,13 @@
 package org.fasttrackit;
 
 public class AutoVehicle extends Vehicle {
-    private Engine engine;
 
+    private Engine engine;
     private boolean running;
 
 
-//    Constructor
-    public AutoVehicle(Engine engine){
+    //    Constructor
+    public AutoVehicle(Engine engine) {
         this.engine = engine;
     }
 
@@ -16,7 +16,7 @@ public class AutoVehicle extends Vehicle {
         this(new Engine());
     }
 
-    public AutoVehicle(Engine engine, String name){
+    public AutoVehicle(Engine engine, String name) {
         this.engine = engine;
         this.setName(name);
     }
@@ -37,6 +37,14 @@ public class AutoVehicle extends Vehicle {
 
     public void setRunning(boolean running) {
         this.running = running;
+    }
+
+    @Override
+    public String toString() {
+        return "AutoVehicle{" +
+                "engine=" + engine +
+                ", running=" + running +
+                "} " + super.toString();
     }
 }
 
