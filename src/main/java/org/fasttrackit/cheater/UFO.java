@@ -3,6 +3,7 @@ package org.fasttrackit.cheater;
 import org.fasttrackit.Vehicle;
 
 public class UFO extends Vehicle {
+
     @Override
     public double accelerate(double speed, double durationInHours) {
         System.out.println("Accelerating as UFO");

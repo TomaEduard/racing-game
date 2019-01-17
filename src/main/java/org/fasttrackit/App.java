@@ -1,11 +1,12 @@
 package org.fasttrackit;
 
-import org.fasttrackit.cheater.UFO;
-
 public class App {
     public static void main(String[] args) {
 
+        Game game = new Game();
 
+        game.start();
+/*
         Engine engine = new Engine();
         engine.setManufacturer("Renault");
         engine.setCapacity(1500);
@@ -21,7 +22,9 @@ public class App {
         Dacia.setDoorCount(4);
 //        Dacia.CONTROL_TYPE = "updated";
 
-        /*
+
+        */
+/*
         Car skoda = new Car(engine);
         skoda.setName("Skoda");
         skoda.setName("Skoda Fabia");
@@ -33,13 +36,12 @@ public class App {
         System.out.println("Control type referenced from firstCar object: " + Dacia.CONTROL_TYPE);
         System.out.println("Control type referenced from firstCar object: " + skoda.CONTROL_TYPE);
 
-
         AutoVehicle ford = new AutoVehicle();
         ford.setName("Ford");
         System.out.println(ford.toString());
 
     */
-
+/*
         System.out.println(Dacia.toString());
 
 //        Exemple of static variables unique for the whole application
@@ -55,11 +57,33 @@ public class App {
 //        Vehicle.vehicleCount = 3;
 
 
+*/
+
+    /*
 
         vehicle1.accelerate(34.12);
         vehicle2.accelerate(130, .8);
 
         new UFO().accelerate(130,.8);
+
+    /*
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*
         double carTraveledDistance = car.accelerate(100, 2);
