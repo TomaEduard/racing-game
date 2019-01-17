@@ -21,12 +21,24 @@ public class Game {
 
         track[0] = track1;
         track[1] = track2;
+
     }
 
     private void displayAvailableTracks() {
         System.out.println("Available Tracks");
-        System.out.println(track[0].getName());
-        System.out.println(track[1].getName());
+
+        for (int i = 0 ; i < track.length; i++) {
+            if (track[i] != null) {
+                System.out.println(track[i].getName());
+            }
+        }
+
+//        enchanced for /"for each"
+        for (Track track : track) {
+            if (track != null) {
+                System.out.println(track.getName());
+            }
+        }
     }
 
     public Vehicle getFirstCompetitor() {
