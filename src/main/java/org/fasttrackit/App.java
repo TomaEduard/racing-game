@@ -3,11 +3,10 @@ package org.fasttrackit;
 public class App {
     public static void main(String[] args) {
 
-        Game game = new Game();
+        Vehicle vehicle1 = new Vehicle();
+        Vehicle vehicle2 = new Vehicle();
 
-        game.start();
-
-/*
+    /*
         Engine engine = new Engine();
         engine.setManufacturer("Renault");
         engine.setCapacity(1500);
@@ -24,8 +23,9 @@ public class App {
 //        Dacia.CONTROL_TYPE = "updated";
 
 
-        */
-/*
+    */
+
+    /*
         Car skoda = new Car(engine);
         skoda.setName("Skoda");
         skoda.setName("Skoda Fabia");
@@ -42,7 +42,8 @@ public class App {
         System.out.println(ford.toString());
 
     */
-/*
+
+    /*
         System.out.println(Dacia.toString());
 
 //        Exemple of static variables unique for the whole application
@@ -58,7 +59,7 @@ public class App {
 //        Vehicle.vehicleCount = 3;
 
 
-*/
+    */
 
     /*
 

@@ -14,8 +14,6 @@ public class Vehicle {
     private double fuelLevel;
     private double totalTraveledDistance;
 
-
-
 //      Constructors
 
     public Vehicle() {
