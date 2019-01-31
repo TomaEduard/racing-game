@@ -1,11 +1,13 @@
 package org.fasttrackit;
 
 public class App {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
 
         Vehicle vehicle1 = new Vehicle();
         Vehicle vehicle2 = new Vehicle();
 
+        Game firstGame = new Game();
+        firstGame.start();
     /*
         Engine engine = new Engine();
         engine.setManufacturer("Renault");
@@ -21,8 +23,6 @@ public class App {
         Dacia.setRunning(true);
         Dacia.setDoorCount(4);
 //        Dacia.CONTROL_TYPE = "updated";
-
-
     */
 
     /*
@@ -30,7 +30,6 @@ public class App {
         skoda.setName("Skoda");
         skoda.setName("Skoda Fabia");
 //        skoda.CONTROL_TYPE = "ttfgf";
-
 
         Dacia.accelerate(44.1, 4.30);
 
@@ -57,17 +56,13 @@ public class App {
 //        Acesta este modul recomandat, se poate apela si de pe obiecte, insa nu este recomandat
 //        Vezi exeemplul vehicle1, vehicle2 cu warninguri !
 //        Vehicle.vehicleCount = 3;
-
-
     */
 
     /*
-
         vehicle1.accelerate(34.12);
         vehicle2.accelerate(130, .8);
 
         new UFO().accelerate(130,.8);
-
     /*
 
 
