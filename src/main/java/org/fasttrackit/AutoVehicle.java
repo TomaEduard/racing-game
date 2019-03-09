@@ -1,12 +1,11 @@
 package org.fasttrackit;
 
+// inheritance or "is-a" relationship
 public class AutoVehicle extends Vehicle {
 
-    private Engine engine;
-    private boolean running;
+    Engine engine;
+    boolean running;
 
-
-    //    Constructor
     public AutoVehicle(Engine engine) {
         this.engine = engine;
     }
@@ -16,35 +15,11 @@ public class AutoVehicle extends Vehicle {
         this(new Engine());
     }
 
-    public AutoVehicle(Engine engine, String name) {
-        this.engine = engine;
-        this.setName(name);
-    }
-
-//
-
-    public Engine getEngine() {
-        return engine;
-    }
-
-    public void setEngine(Engine engine) {
-        this.engine = engine;
-    }
-
-    public boolean isRunning() {
-        return running;
-    }
-
-    public void setRunning(boolean running) {
-        this.running = running;
-    }
-
     @Override
     public String toString() {
         return "AutoVehicle{" +
                 "engine=" + engine +
                 ", running=" + running +
-                "} " + super.toString();
+                '}';
     }
 }
-

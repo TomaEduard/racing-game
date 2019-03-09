@@ -2,18 +2,13 @@ package org.fasttrackit;
 
 public class Track {
 
-
     private String name;
     private double length;
 
-    //Constuctors
     public Track(String name, double length) {
         this.name = name;
         this.length = length;
     }
-
-
-    //
 
     public String getName() {
         return name;
@@ -30,5 +25,4 @@ public class Track {
     public void setLength(double length) {
         this.length = length;
     }
-
 }

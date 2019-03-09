@@ -2,46 +2,48 @@ package org.fasttrackit;
 
 public class Vehicle {
 
-    //    Variablile de classa sunt caracterizate clasei, deci daca se modifica se
-    //    va modifica peste tot unde este apelat.
     public static int vehicleCount;
 
-    //    Variabile de instanta sunt caracterizate fiecarei obiect in parte
     private String name;
     private String color;
-    private int wheelCount;
     private double mileage;
     private double fuelLevel;
     private double totalTraveledDistance;
-
-//      Constructors
 
     public Vehicle() {
         vehicleCount++;
     }
 
-    //      Methods
-
     public double accelerate(double speed, double durationInHours) {
-        System.out.println(getName() + " accelerated with " + speed +
+        System.out.println(name + " accelerated with " + speed +
                 " km/h for " + durationInHours + " hours.");
+
         double traveledDistance = speed * durationInHours;
+
         System.out.println("Traveled distance: " + traveledDistance + " km.");
+
+        // same as: totalTraveledDistance = totalTraveledDistance + traveledDistance;
         totalTraveledDistance += traveledDistance;
         System.out.println("Total traveled distance: " + totalTraveledDistance);
 
-        double spentFuel = traveledDistance * mileage /100;
+        double spentFuel = traveledDistance * mileage / 100;
+
         fuelLevel -= spentFuel;
         System.out.println("Remaining fuel: " + fuelLevel);
+
         return traveledDistance;
     }
 
+    // example of method overloading
     public double accelerate(double speed) {
         return accelerate(speed, 1);
     }
 
-
-//    getther/setther
+    protected Vehicle clone() {
+        Vehicle vehicle = new Vehicle();
+        // copy properties from current object or simply call this.clone();
+        return vehicle;
+    }
 
     public String getName() {
         return name;
@@ -57,14 +59,6 @@ public class Vehicle {
 
     public void setColor(String color) {
         this.color = color;
-    }
-
-    public int getWheelCount() {
-        return wheelCount;
-    }
-
-    public void setWheelCount(int wheelCount) {
-        this.wheelCount = wheelCount;
     }
 
     public double getMileage() {
@@ -96,7 +90,6 @@ public class Vehicle {
         return "Vehicle{" +
                 "name='" + name + '\'' +
                 ", color='" + color + '\'' +
-                ", wheelCount=" + wheelCount +
                 ", mileage=" + mileage +
                 '}';
     }

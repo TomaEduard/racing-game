@@ -1,30 +1,15 @@
 package org.fasttrackit;
 
-public class Car extends AutoVehicle {
+public class Car extends  AutoVehicle {
 
-
-    public static final String CONTROL_TYPE = "radio_controlled";
-
-    private int doorCount;
-
-
-    //    Constructori
+    int doorCount;
 
     public Car(Engine engine) {
         super(engine);
     }
 
-
-    //    Methods
-
-
-    //  gather & setter
-    public int getDoorCount() {
-        return doorCount;
-    }
-
-    public void setDoorCount(int doorCount) {
-        this.doorCount = doorCount;
+    public Car() {
+        super();
     }
 
     @Override
